@@ -35,6 +35,8 @@ public class Aula20250213 {
            x1 = scanner.nextInt();
            System.out.printf("Digite o segundo numero: \n");
            x2 = scanner.nextInt();
+           
+           System.out.printf("O resultado da soma foi de %d \n", x1+x2);
          }
          else if(opr == 2)
          {
