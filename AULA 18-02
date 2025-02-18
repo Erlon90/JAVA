@@ -1,0 +1,97 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ */
+
+package com.mycompany.aula20250218;
+
+import java.util.Scanner;
+
+
+public class Aula20250218 {
+public static int calculadora(int operacao, double x , double y, int z)
+{
+    Scanner scanner = new Scanner(System.in);
+    System.out.printf("Digite o numero referente ao tipo de operação que voce quer fazer: ");
+    operacao = scanner.nextInt();
+    System.out.printf("o Numero selecionado foi: %d \n\n",operacao);
+     
+    if(operacao == 1)
+    {
+           System.out.println("A opção selecionada foi a Adição\n");
+           System.out.printf("Digite o primeiro numero: \n");
+           x = scanner.nextDouble();
+           System.out.printf("Digite o segundo numero: \n");
+           y = scanner.nextDouble();
+           
+           System.out.printf("O resultado da soma foi de %.1f \n\n", x+y);
+    }
+    else if(operacao == 2)
+         {
+            System.out.println("A opção selecionada foi a Subtração\n");
+             
+            System.out.printf("Digite o primeiro numero: \n");
+            x = scanner.nextDouble();
+            System.out.printf("Digite o segundo numero: \n");
+            y = scanner.nextDouble();
+           
+           System.out.printf("O resultado da soma foi de %.1f\n\n", x-y);
+         }
+    else if(operacao == 3)
+         {
+            System.out.println("A opção selecionada foi a Multiplicação\n");
+            System.out.printf("Digite o primeiro numero: \n");
+            x = scanner.nextDouble();
+            System.out.printf("Digite o segundo numero: \n");
+            y = scanner.nextDouble();
+           
+            System.out.printf("O resultado da soma foi de %.1f \n\n", x*y);
+         }
+    else if(operacao == 4)
+         {
+            System.out.println("A opção selecionada foi a Divisão\n");
+            System.out.printf("Digite o primeiro numero: \n");
+            x = scanner.nextDouble();
+            System.out.printf("Digite o segundo numero: \n");
+            y = scanner.nextDouble();
+           
+            double resultado = x / y;
+            
+           System.out.printf("O resultado da divisão foi de %.2f \n", x / y);
+         }
+    else if(operacao == 0)
+         { 
+           System.out.println("------------------------------------------------------------------------");  
+           System.out.println("\t\t\t\tSaindo....");  
+           System.out.println("------------------------------------------------------------------------");  
+           
+           
+           z = 0;
+           return 1;
+         }
+    else
+         {
+            System.out.println("O número digitado não está dentro do escopo disponível");
+         }
+    return 0;
+}
+
+
+    public static void main(String[] args) 
+    {
+        int z = 1;
+        
+        do 
+        {
+            double x1 = 0;
+            double x2 = 0;
+            int opr = 0;
+         System.out.println("CALCULADORA");   
+         
+         System.out.println("Escolha o tipo de operação a ser feito: \n"
+                 + "1-Adição \n2-Subtração \n3-Multiplicação \n4-Divisão\n0-Sair"); 
+         
+            int calculadora = calculadora(opr,x1,x2,z);
+         
+        } while (z != 0);
+    }
+}
